@@ -13,6 +13,12 @@ def index_handler(request):
     }
     return render(request, 'index.html', context)
 
+def hospital_handler(request, id):
+    context = {
+        'hospital' : Hospital.objects.filter(id=id)[0]
+    }
+    return render(request, 'hospital_detail.html', context)
+
 def register_handler(request):
     return render(request, 'register.html')
 
