@@ -3,14 +3,12 @@ from django.contrib import auth
 
 # Create your models here.
 
-# class Account(models.Model):
-#     name = models.CharField(max_length=1000)
-#     organisation = models.CharField(max_length=1000, blank=True, default="")
-#     phone = models.IntegerField(default=0)
-#     password = models.CharField(max_length=100)
-#     email = models.CharField(max_length=100)
-#     bio = models.CharField(max_length=1000, blank=True)
-#     address = models.CharField(max_length=1000, blank=True)
+class Account(models.Model):
+    hospital_name = models.CharField(max_length=1000)
+    location = models.CharField(max_length=1000, blank=True, default="")
+    phone = models.IntegerField(default=0)
+    password = models.CharField(max_length=100)
+    
 
 # class InternshipPost(models.Model):
 #     # recruiter = models.ForeignKey(Account, on_delete=models.CASCADE)
@@ -34,3 +32,14 @@ from django.contrib import auth
 #     maintainer_name = models.CharField(max_length=100)
 #     maintainer_phone = models.CharField(max_length=10)
 #     maintainer_email = models.EmailField()
+
+
+# Hospital Name
+# Location
+# Password
+# Contact no.
+
+# Blood group
+# OT
+# Beds
+# Working hours

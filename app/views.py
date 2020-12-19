@@ -13,3 +13,11 @@ def index_handler(request):
         # 'openSourcePosts' : OpenSourcePost.objects.all()[0:3]
     }
     return render(request, 'index.html', context)
+
+def register_handler(request):
+    return render(request, 'register.html')
+
+class Register (CreateView):
+	form_class = forms.UserCreateForm
+	success_url = reverse_lazy('login')
+	template_name='register.html'    
