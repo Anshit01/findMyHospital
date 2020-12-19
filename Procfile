@@ -1,0 +1,1 @@
+web: gunicorn findMyHospital.wsgi --log-file -
