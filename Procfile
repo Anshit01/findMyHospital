@@ -1,0 +1,1 @@
+web: gunicorn devNITH.wsgi --log-file -
