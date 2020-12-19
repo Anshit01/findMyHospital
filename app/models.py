@@ -3,12 +3,33 @@ from django.contrib import auth
 
 # Create your models here.
 
-class Account(models.Model):
-    hospital_name = models.CharField(max_length=1000)
-    location = models.CharField(max_length=1000, blank=True, default="")
-    phone = models.IntegerField(default=0)
-    password = models.CharField(max_length=100)
-    
+class Hospital(models.Model):
+    name = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    speciality = models.CharField(max_length=200)
+    email = models.EmailField()
+    contact_no = models.IntegerField()
+    ot = models.IntegerField()
+    beds = models.IntegerField()
+    bgAp = models.IntegerField()
+    bgBp = models.IntegerField()
+    bgABp = models.IntegerField()
+    bgOp = models.IntegerField()
+    bgAn = models.IntegerField()
+    bgBn = models.IntegerField()
+    bgABn = models.IntegerField()
+    bgOn = models.IntegerField()
+    timing = models.CharField(max_length=50)
+
+
+# class Account(models.Model):
+#     name = models.CharField(max_length=1000)
+#     organisation = models.CharField(max_length=1000, blank=True, default="")
+#     phone = models.IntegerField(default=0)
+#     password = models.CharField(max_length=100)
+#     email = models.CharField(max_length=100)
+#     bio = models.CharField(max_length=1000, blank=True)
+#     address = models.CharField(max_length=1000, blank=True)
 
 # class InternshipPost(models.Model):
 #     # recruiter = models.ForeignKey(Account, on_delete=models.CASCADE)
