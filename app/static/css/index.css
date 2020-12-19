@@ -1,7 +1,7 @@
 .hero-wrap{
-    padding-top: 80px;
+    padding-top: 150px;
     padding-bottom: 80px;
-    background-color: #f6ebff;
+    background-color:#d1def0;
 }
 
 .hero-section-heading{
@@ -29,7 +29,7 @@
 }
 
 .btn-filled{
-    background-color:  #8e44ad;
+    background-color:  #1f385c;
     color: #fff;
     margin-right: 20px;
 }
@@ -40,218 +40,23 @@
 }
 
 .btn-hollow{
-    border:  2px solid #8e44ad !important;
-    color: #8e44ad;
+    border:  2px solid #1f385c !important;
+    color: #1f385c;
     font-weight: 600;
 }
 
 .btn-hollow:hover{
-    color: #8e44ad;
+    color: #1f385c;
     text-decoration: none;
 }
 
 .hero-section-img{
-    width: 100%;
-}
-
-/* Intern Section */
-
-.cards-section{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #f6ebff;
-}
-
-.intern-section-heading{
-    text-align: center;
-}
-
-.intern-section-subheading{
-    text-align: center;
-    letter-spacing: 4px;
-    margin-bottom: 50px;
-    font-weight: 600;
-}
-
-
-.card-head {
-    background-color: #3c096c;
-    border-radius: 5px 5px 0 0;
-    padding: 40px;
-}
-
-.card-title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 0;
-    color: #ecf0f1;
-}
-
-.card-time {
-    font-size: 14px;
-    color: #d6d8d8;
-    margin-bottom: 25px;
-}
-
-.card-apply-btn {
-    background-color: #7b2cbf;
-    width: fit-content;
-    padding: 5px 10px;
-    color: #e2e3e4;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
-.card-foot {
-    border: 2px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    padding: 40px;
-}
-
-.card-tags {
-    color: #8090BD !important;
-}
-
-.tech-tag{
-    padding: 8px 5px;
-}
-
-.img-tag{
-    width: 10%;
-}
-
-.card-description {
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-/* open source section */
-
-.open-source-section{
-    background-color: #10002b;
-    padding-top: 50px;
-    padding-bottom: 50px;
-}
-
-.open-source-notification{
-    padding-top: 50px;
-}
-
-.open-source-latest{
-    color: #e0aaff;
-}
-
-.open-source-projects{
-    color: #fff;
-}
-
-hr{
-    background-color: #e0aaff;
-}
-
-.open-source-heading{
-    color: #fff;
-    padding-top: 250px;
-    padding-left: 70px;
-}
-
-.arrow-img{
-    width: 30%;
-    fill: #fff;
-    float: right;
-    margin-right: 15px;
+    width: 70%;
 }
 
 
 
-.project-card{
-    display: flex;
-    flex-direction: row;
-}
-
-.open-source-latest{
-    margin-bottom: 50px;
-}
-
-/* Explore more Open source Projects */
 
 
-.open-source-cards-section{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    background-color: #f6ebff;
-}
 
-.open-source-section-heading{
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.open-source-card-head {
-    background-color: #3c096c;
-    border-radius: 5px 5px 0 0;
-    padding: 40px;
-}
-
-.open-source-card-title {
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 0;
-    color: #ecf0f1;
-}
-
-.open-source-card-time {
-    font-size: 14px;
-    color: #d6d8d8;
-    margin-bottom: 25px;
-}
-
-.open-source-card-apply-btn {
-    background-color: #7b2cbf;
-    width: fit-content;
-    padding: 5px 10px;
-    color: #e2e3e4;
-    font-weight: 500;
-    border-radius: 5px;
-}
-
-.open-source-card-foot {
-    border: 2px solid #ddd;
-    border-top: none;
-    border-radius: 0 0 5px 5px;
-    padding: 40px;
-}
-
-.open-source-card-tags {
-    color: #8090BD !important;
-}
-
-.tech-tag{
-    padding: 8px 5px;
-}
-
-.img-tag{
-    width: 10%;
-}
-
-.open-source-card-description {
-    margin-top: 10px;
-    margin-bottom: 0;
-}
-
-/* upcoming */
-
-.coming-soon-section{
-    background-color: #f6ebff;
-}
-
-.coming-soon{
-    color:#3c096c;
-    /* font-size: 18px; */
-    font-weight: 500;
-    text-align: center;
-    padding-top: 50px;
-    padding-bottom:100px ;
-}
 

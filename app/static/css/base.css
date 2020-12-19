@@ -10,20 +10,20 @@
 }
 
 .nav-container{
-    border-bottom: 1px solid #8e44ad ;
+    border-bottom: 1px solid #1f385c ;
 }
 
 .navbar{
-    background-color: #ecf0f1;
-    padding-bottom: 20px;
-    padding-top: 20px;
+    background-color: #bde0fe;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .navbar-brand{
     
     font-size: 20px;
     font-weight: 500;
-    color: #8e44ad !important;
+    color: #1f385c !important;
     padding-left: 30px;
     padding-right: 30px;
 }
@@ -31,7 +31,7 @@
 
 
 .nav-link{
-    color: #8e44ad !important;
+    color: #1f385c !important;
 }
 
 .join-btn{
@@ -42,15 +42,15 @@
     border-radius: 5px;
     color: #fff !important;
     padding: 5px 15px 5px 15px !important;
-    background-color: #8e44ad;
+    background-color: #1f385c;
 }
 
 .navbar-toggler-icon{
-    color: #8e44ad !important;
+    color: #0077b6 !important;
 }
 
 .navbar-toggler{
-    color: #8e44ad !important;
+    color: #0077b6 !important;
 }
 
 .navbar-toggler:focus{
@@ -80,14 +80,14 @@ h2{
 
   .site-footer
 {
-  background-color: #10002b;
+  background-color: #0f1c2e;
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
 }
 .site-footer hr
 {
-  border-top-color:#e0aaff;
+  border-top-color:#fff;
   opacity:0.5
 }
 .site-footer hr.small
@@ -96,7 +96,7 @@ h2{
 }
 .site-footer h3
 {
-  color:#e0aaff;
+  color:#fff;
   font-size:16px;
   text-transform:uppercase;
   margin-top:5px;
