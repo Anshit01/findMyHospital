@@ -38,7 +38,43 @@
     </div>
 
     <div class="hospital-list-section">
-
+        <div class="container">
+            <div class="row">
+                {% for hospital in hospitals %}
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="/hospital/{{hospital.id}}">
+                            <div class="hospital-card mx-5 mx-md-1">
+                                <div class="card-head">
+                                    <p class="card-title">
+                                        {{hospital.name}}
+                                    </p>
+                                    <p class="card-time">
+                                        {{hospital.location}}
+                                    </p>
+                                    <p class="card-time">
+                                        {{hospital.speciality}}
+                                    </p>
+                                </div>
+                                <div class="card-foot">
+                                    <div class="card-tags">
+                                        <span class="badge badge-pill badge-secondary card-tag">Beds: {{hospital.beds}}</span>
+                                        <span class="badge badge-pill badge-secondary card-tag">OT: {{hospital.ot}}</span>
+                                    </div>
+                                    <div class="card-description">
+                                        <p class="contact">
+                                            Contact: {{hospital.contact_no}}
+                                        </p>
+                                        <p class="timing">
+                                            Open: {{hospital.timing}}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
     </div>
    
     
