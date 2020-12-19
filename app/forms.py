@@ -5,18 +5,18 @@ from django import forms
 
 # from .models import InternshipPost, OpenSourcePost
 
-# class UserCreateForm(UserCreationForm):
-# 	class Meta:
+class UserCreateForm(UserCreationForm):
+	class Meta:
        
-# 		fields = ('username', 'email', 'password1', 'password2')
-# 		model = get_user_model()
+		fields = ('username','password1', 'password2')
+		model = get_user_model()
       
-# 		def __init__(self, *args, **kwargs):
-# 			super().__init__(*args, **kwargs)
-# 			self.fields['username'].label.widget.attrs.update({'class': 'form-control'})
-# 			self.fields['email'].widget.attrs.update({'class': 'form-control'})
+		def __init__(self, *args, **kwargs):
+			super().__init__(*args, **kwargs)
+			self.fields['username'].label.widget.attrs.update({'class': 'form-control'})
+			
 
-# class InternshipPostCreateForm(forms.ModelForm):
+# class HospitalDataCreateForm(forms.ModelForm):
 # 	class Meta:
 # 		model = InternshipPost
 # 		fields = [
@@ -29,14 +29,4 @@ from django import forms
 # 			'recruiter_email',
 # 		]
 
-# class OpenSourcePostCreateForm(forms.ModelForm):
-# 	class Meta:
-# 		model = OpenSourcePost
-# 		fields = [
-# 			'title',
-# 			'description',
-# 			'github_link',
-# 			'maintainer_name',
-# 			'maintainer_phone',
-# 			'maintainer_email',
-# 		]
+

@@ -53,3 +53,14 @@ class Hospital(models.Model):
 #     maintainer_name = models.CharField(max_length=100)
 #     maintainer_phone = models.CharField(max_length=10)
 #     maintainer_email = models.EmailField()
+
+
+# Hospital Name
+# Location
+# Password
+# Contact no.
+
+# Blood group
+# OT
+# Beds
+# Working hours
