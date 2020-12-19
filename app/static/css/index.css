@@ -63,8 +63,62 @@
 }
 
 
+.hospital-list-section {
+    margin: 50px 0;
+}
 
+/*****************************Cards**********************/
+.hospital-card {
+    margin-bottom: 40px;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+        rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.hospital-card:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(3, 8, 20, 0.15) 0px 0.15rem 0.75rem,
+        rgba(2, 8, 20, 0.15) 0px 0.075rem 0.25rem;
+}
 
+.card-head {
+    background-color: #9b59b6;
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+}
 
+.card-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: #ecf0f1;
+}
 
+.card-time {
+    font-size: 14px;
+    color: #d6d8d8;
+    margin-bottom: 5px;
+}
 
+.card-apply-btn {
+    background-color: #8b1eb9;
+    width: fit-content;
+    padding: 5px 10px;
+    color: #e2e3e4;
+    font-weight: 500;
+}
+
+.card-foot {
+    border: 2px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    padding: 20px;
+}
+
+.card-tags {
+    color: #555 !important;
+}
+
+.card-description {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
