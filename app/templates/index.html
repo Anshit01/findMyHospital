@@ -22,8 +22,7 @@
                     <div class="btn-group">
                         
                         {% if user.is_authenticated %}
-                        <a href="/add_internship_post" class="hero-section-btn btn-filled">Post an<br>Internship</a>  
-                        <a href="add_open_source_post" class="hero-section-btn btn-hollow">Post an Open<br>Source Project</a>
+                        <a href="#" class="hero-section-btn btn-filled">Update Data</a>  
                         {% else %}
                         <a href="/register" class="hero-section-btn btn-filled">Join Us</a>  
                         <a href="/login" class="hero-section-btn btn-hollow">Login</a>
@@ -31,11 +30,15 @@
                     </div>    
                      
                 </div>
-                <div class="col-md-5">
-                    <img src="{% static 'images/hero.png' %}" class="hero-section-img" />
+                <div class="col-md-5 doctor-image">
+                    <img src="{% static 'images/hero.png' %}" class="hero-section-img mt-xs-5 mt-sm-0 mx-auto" />
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="hospital-list-section">
+
     </div>
    
     
