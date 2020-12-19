@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <title>devNITH</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class="hero-wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 class="hero-section-heading">A Step Forward to your Development Journey</h1>
+                    <p class="hero-section-text">
+                        Gateway to internship and open source opportunities by the students of NITH for the students of NITH
+                    </p>
+                    <p class="hero-section-recruiter">Got a Open Source Project or Startup idea??</p>
+                    <div class="btn-group">
+                        
+                        {% if user.is_authenticated %}
+                        <a href="/add_internship_post" class="hero-section-btn btn-filled">Post an<br>Internship</a>  
+                        <a href="add_open_source_post" class="hero-section-btn btn-hollow">Post an Open<br>Source Project</a>
+                        {% else %}
+                        <a href="/register" class="hero-section-btn btn-filled">Join Us</a>  
+                        <a href="/login" class="hero-section-btn btn-hollow">Login</a>
+                        {% endif %}
+                    </div>    
+                     
+                </div>
+                <div class="col-md-5">
+                    <img src="{% static 'images/download.png' %}" class="hero-section-img" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cards-section">
+        <div class="container">
+            <h2 class="intern-section-heading">Internship</h2>
+            <p class="intern-section-subheading">To get ahead , get started</p>
+            <div class="row">
+
+                {% for post in internshipPosts %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="internship-card mx-5 mx-md-1">
+                        <div class="card-head">
+                            <p class="card-title">
+                                {{post.title}}
+                            </p>
+                            <p class="card-time">
+                                Open till {{post.last_date}}
+                            </p>
+                            <a href="/internship/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-foot">
+                            <div class="card-tags">
+                                <span class="badge badge-pill badge-secondary card-tag">Android</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Backend</span>
+                            </div>
+                            <p class="card-description">
+                                {{post.description|truncatechars:100}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>   
+    
+    <div class="open-source-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="open-source-links" style="background-image: url({% static 'images/clip-175.png' %}); background-size: 40%; background-repeat: no-repeat; padding-left: 50px">
+                        <h1 class="open-source-heading">Kickstart Your Open Source Journey</h1>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="open-source-notification">
+                        <h3 class="open-source-latest">Start Here</h3>
+                        {% for post in openSourcePosts %}
+                        <a href="/open_source/{{post.id}}">
+                        <div class="project-card">
+                            <p class="open-source-projects">
+                                <strong>{{post.title}}</strong><br>
+                                {{post.description|truncatechars:50}}
+                            </p>
+                            <div class="arrow-icon"><img src="{% static 'images/Asset 1.svg' %}" class="arrow-img"></div>
+                        </div>
+                        </a>
+                        <hr>
+                        {% endfor %}
+                        
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="open-source-cards-section">
+        <div class="container">
+            <h2 class="open-source-section-heading">Explore More Open Source Project</h2>
+            <div class="row">
+
+                {% for post in openSourcePosts %}
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="internship-card mx-5 mx-md-1">
+                        <div class="card-head">
+                            <p class="card-title">
+                                {{post.title}}
+                            </p>
+                            <p class="card-time">
+                                By {{post.maintainer_name}}
+                            </p>
+                            <a href="/open_source/{{post.id}}">
+                                <div class="card-apply-btn">
+                                    <span>Apply Now</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="card-foot">
+                            <div class="card-tags">
+                                <span class="badge badge-pill badge-secondary card-tag">Android</span>
+                                <span class="badge badge-pill badge-secondary card-tag">Backend</span>
+                            </div>
+                            <p class="card-description">
+                                {{post.description|truncatechars:100}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div> 
+    
+    <div class="coming-soon-section">
+        <h3 class="coming-soon">More projects coming soon</h3>
+    </div>
+
+    
+
+{% endblock %}
