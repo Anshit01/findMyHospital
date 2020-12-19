@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+
+    <title>Open Source</title>
+{% endblock %}
+
+{% block body_block %}
+
+<div class="page-wrap">
+    <div class="container">
+        <div class="row">
+            <div class=" col-10 col-md-5 mx-auto">
+                <div class="wrap-form mx-auto">
+                    <h1 class="heading">Login Here</h1>
+                    <form class="signup-form" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" class="btn-login" value="Login">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

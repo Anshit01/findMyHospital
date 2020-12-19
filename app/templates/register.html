@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+    <title>Open Source</title>
+{% endblock %}
+
+{% block body_block %}
+
+<div class="page-wrap">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="img-wrap mx-auto">
+                    <img src="{% static 'images/register.png' %}" class="register-img" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="reg-wrap">
+                    <h1 class="heading">Join Us</h1>
+                    <form class="register-form" method="POST">
+                        {% csrf_token %}
+                        {% bootstrap_form form %}
+                        <input type="submit" class="register-btn" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+{% endblock %}
