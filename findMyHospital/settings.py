@@ -25,7 +25,7 @@ TEMPLATE_DIR = os.path.join(BASE_DIR,'app','templates')
 SECRET_KEY = config.CONFIG_SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config.DEBUG
 
 ALLOWED_HOSTS = ['*']
 
