@@ -1,1 +1,1 @@
-web: gunicorn devNITH.wsgi --log-file -
+web: gunicorn findMyHospital.wsgi --log-file -
