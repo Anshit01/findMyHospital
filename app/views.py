@@ -8,6 +8,16 @@ from .models import Hospital
 
 # Create your views here.
 def index_handler(request):
+    context = {}
+    if request.method == 'GET' and request.GET:
+        location = request.GET['location']
+        # bg = request.GET['bg']
+        if location != '':
+            context = {
+                'hospitals' : Hospital.objects.all().filter(location=location),
+                'location' : location
+            }
+        return render(request, 'index.html', context)
     context = {
         'hospitals' : Hospital.objects.all()
     }
