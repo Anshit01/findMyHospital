@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load static %}
+
+{% block head_block %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+
+    <title>Update Data</title>
+{% endblock %}
+
+{% block body_block %}
+
+<div class="page-wrap">
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-5 ">
+                <div class="input-group mb-3 mx-auto mt-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">Hospital Name</span>
+                    </div>
+                    <input type="text" class="form-control hospital-name text-center" id="basic-url" aria-describedby="basic-addon3" >
+                </div>
+                
+                <div class="contact-flex">
+                    <div class="input-group1 mb-3 mx-auto mt-3 group-1">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Location</span>
+                        </div>
+                        <input type="text" class="form-control hospital-name text-center" id="basic-url" aria-describedby="basic-addon3" >
+                    </div>
+
+                    <div class="input-group2 mb-3 mx-auto mt-3 group-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Phone Number</span>
+                        </div>
+                        <input type="text" class="form-control hospital-name text-center" id="basic-url" aria-describedby="basic-addon3" >
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+{% endblock %}
