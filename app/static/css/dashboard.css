@@ -32,3 +32,13 @@
     text-align: center;
     color: #1f385c;
 }
+
+.save-btn{
+    padding: 5px 25px 5px 25px;
+    background-color: #1f385c;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    float: right;
+    margin-bottom: 20px;
+}

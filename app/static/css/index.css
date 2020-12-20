@@ -98,7 +98,7 @@
 }
 
 .card-head {
-    background-color: #9b59b6;
+    background-color: #1f385c;
     border-radius: 5px 5px 0 0;
     padding: 20px;
 }
@@ -117,7 +117,7 @@
 }
 
 .card-apply-btn {
-    background-color: #8b1eb9;
+    background-color: #1f385c;
     width: fit-content;
     padding: 5px 10px;
     color: #e2e3e4;
