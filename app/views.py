@@ -25,4 +25,7 @@ def register_handler(request):
 class Register (CreateView):
 	form_class = forms.UserCreateForm
 	success_url = reverse_lazy('login')
-	template_name='register.html'    
+	template_name='register.html'
+
+def dashboard_handler(request):
+    return render(request, 'dashboard.html')        

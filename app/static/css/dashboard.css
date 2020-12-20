@@ -1,0 +1,34 @@
+.hospital-name{
+    width: 50%;
+}
+
+.contact-flex{
+    display: flex;
+}
+
+.group-1{
+    display: flex;
+    /* justify-content: flex-start; */
+}
+.group-2{
+    display: flex;
+    /* justify-content: flex-end; */
+}
+
+.group-3{
+    display: flex;
+}
+
+.details-gap{
+    border: 1px solid  #1f385c;
+}
+
+.bg-heading{
+    text-align: center;
+    color: #1f385c;
+}
+
+.update-hg{
+    text-align: center;
+    color: #1f385c;
+}

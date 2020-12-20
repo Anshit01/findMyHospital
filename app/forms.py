@@ -8,13 +8,13 @@ from django import forms
 class UserCreateForm(UserCreationForm):
 	class Meta:
        
-		fields = ('username','password1', 'password2')
+		fields = ('email','username','password1', 'password2')
 		model = get_user_model()
       
 		def __init__(self, *args, **kwargs):
 			super().__init__(*args, **kwargs)
 			self.fields['username'].label.widget.attrs.update({'class': 'form-control'})
-			
+			self.fields['email'].label.widget.attrs.update({'class': 'form-control'})
 
 # class HospitalDataCreateForm(forms.ModelForm):
 # 	class Meta:

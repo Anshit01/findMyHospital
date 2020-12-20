@@ -8,6 +8,7 @@ from findMyHospital import settings
 
 urlpatterns = [
     path('', views.index_handler, name='index'),
+    path('dashboard/',views.dashboard_handler,name='dashboard'),
 
     # path('internship/', views.internship_handler, name="internship"),
     # path('internship/<int:id>', views.internship_description_handler, name="internship_desctiption"),
