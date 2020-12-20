@@ -14,30 +14,49 @@
             <h1 class="hospital-name">
                 {{hospital.name}}
             </h1>
-            <h3 class="hospital-location">
-                {{hospital.location}}
-            </h3>
-            <h4 class="hospital-speciality">
+
+            <div class="loc">
+                <img src="{% static 'images/pin.png' %}" class="location-icon"/>
+                <span class="hospital-location">
+                    {{hospital.location}}
+                </span>
+            </div>
+
+            <!-- <h4 class="hospital-speciality">
                 {{hospital.speciality}}
-            </h4>
-            <h4 class="hospital-contact">
-                {{hospital.contact_no}}
-            </h4>   
-            <h4 class="hospital-timing">
-                {{hospital.timing}}
-            </h4>
-            <hr class="details-gap">
-            <div class="flex-bed-ot">
-                <p class="hospital-beds">
-                    Beds: {{hospital.beds}}
-                </p>
-                <p class="hospital-ot">
-                    Operation Theatres: {{hospital.ot}}
-                </p>
+            </h4> -->
+            <div class="phone">
+                <img src="{% static 'images/telephone.png' %}" class="location-icon"/>
+                <span class="hospital-contact">
+                    {{hospital.contact_no}}
+                </span>  
+            </div>
+            <div class="time">
+                <img src="{% static 'images/home.png' %}" class="location-icon"/>
+                <span class="hospital-timing">
+                    {{hospital.timing}}
+                </span>
             </div>
             
-            <p>
-                Blood Availability:
+            <hr class="details-gap">
+            <div class="flex-bed-ot">
+                <div class="bed">
+                    <p class="hospital-beds">
+                        <strong>Beds</strong> 
+                    </p>
+                    <span>{{hospital.beds}}</span>
+                </div>
+                
+                <div class="ot">
+                    <p class="hospital-ot">
+                       <strong>Operation Theatres </strong> 
+                    </p>
+                    <span>{{hospital.ot}}</span>
+                </div>
+            </div>
+            
+            <p class="blood-groups">
+                <strong>Blood Availability:</strong>
             </p>
             <div class="row">
                 <div class="col-6  col-md-4">
