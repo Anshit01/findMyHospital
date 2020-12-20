@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -14,12 +14,12 @@ def index_handler(request):
         # bg = request.GET['bg']
         if location != '':
             context = {
-                'hospitals' : Hospital.objects.all().filter(location=location),
+                'hospitals' : Hospital.objects.all().filter(location=location, show=True),
                 'location' : location
             }
         return render(request, 'index.html', context)
     context = {
-        'hospitals' : Hospital.objects.all()
+        'hospitals' : Hospital.objects.filter(show=True)
     }
     return render(request, 'index.html', context)
 
@@ -38,4 +38,18 @@ class Register (CreateView):
 	template_name='register.html'
 
 def dashboard_handler(request):
-    return render(request, 'dashboard.html')        
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            Hospital.objects.create(
+                
+            )
+        else:
+            context = {}
+            hospitals = Hospital.objects.filter(email=request.user.email)
+            if len(hospitals) == 0:
+                context['flag'] = False
+            else:
+                context['flag'] = True
+                context['hospital'] = hospitals[0]
+            return render(request, 'dashboard.html', context)
+    return redirect('/')       

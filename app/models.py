@@ -20,6 +20,7 @@ class Hospital(models.Model):
     bgABn = models.IntegerField()
     bgOn = models.IntegerField()
     timing = models.CharField(max_length=50)
+    show = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name + ", " + self.location
