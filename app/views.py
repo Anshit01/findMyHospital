@@ -14,12 +14,12 @@ def index_handler(request):
         # bg = request.GET['bg']
         if location != '':
             context = {
-                'hospitals' : Hospital.objects.all().filter(location=location),
+                'hospitals' : Hospital.objects.all().filter(location=location, show=True),
                 'location' : location
             }
         return render(request, 'index.html', context)
     context = {
-        'hospitals' : Hospital.objects.all()
+        'hospitals' : Hospital.objects.filter(show=True)
     }
     return render(request, 'index.html', context)
 
@@ -39,10 +39,17 @@ class Register (CreateView):
 
 def dashboard_handler(request):
     if request.user.is_authenticated:
-        
-        context = {
-            'hospital' : Hospital.objects.filter(email=request.user.email)[0]
-        }
-        if()
-        return render(request, 'dashboard.html', context)
+        if request.method == 'POST':
+            Hospital.objects.create(
+                
+            )
+        else:
+            context = {}
+            hospitals = Hospital.objects.filter(email=request.user.email)
+            if len(hospitals) == 0:
+                context['flag'] = False
+            else:
+                context['flag'] = True
+                context['hospital'] = hospitals[0]
+            return render(request, 'dashboard.html', context)
     return redirect('/')       
