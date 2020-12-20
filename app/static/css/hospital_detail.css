@@ -1,3 +1,36 @@
 .main-section {
     margin: 50px 0;
 }
+
+.flex-bed-ot{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.hospital-beds{
+    margin-right: 50px;
+}
+
+.hospital-name{
+    color: #1f385c;
+}
+
+.details-gap{
+    border: 1px solid  #1f385c;
+}
+
+.hospital-location{
+    color: #2b2d42;
+}
+
+.hospital-speciality{
+    color: #29497a;
+}
+
+.hospital-contact{
+    color: #2b2d42;
+}
+
+.hospital-timing{
+    color: #2b2d42;
+}
