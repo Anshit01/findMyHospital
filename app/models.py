@@ -6,7 +6,7 @@ from django.contrib import auth
 class Hospital(models.Model):
     name = models.CharField(max_length=200)
     location = models.CharField(max_length=200)
-    speciality = models.CharField(max_length=200)
+    speciality = models.CharField(max_length=200, blank=True)
     email = models.EmailField()
     contact_no = models.IntegerField()
     ot = models.IntegerField()
@@ -20,6 +20,9 @@ class Hospital(models.Model):
     bgABn = models.IntegerField()
     bgOn = models.IntegerField()
     timing = models.CharField(max_length=50)
+
+    def __str__(self):
+        return self.name + ", " + self.location
 
 
 # class Account(models.Model):
