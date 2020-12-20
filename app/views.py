@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import login, logout
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -38,4 +38,11 @@ class Register (CreateView):
 	template_name='register.html'
 
 def dashboard_handler(request):
-    return render(request, 'dashboard.html')        
+    if request.user.is_authenticated:
+        
+        context = {
+            'hospital' : Hospital.objects.filter(email=request.user.email)[0]
+        }
+        if()
+        return render(request, 'dashboard.html', context)
+    return redirect('/')       

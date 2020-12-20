@@ -19,7 +19,8 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="basic-addon3">Hospital Name</span>
                     </div>
-                    <input type="text" class="form-control hospital-name text-center" id="basic-url" aria-describedby="basic-addon3" >
+                    <input type="text" class="form-control hospital-name text-center" id="basic-url"
+                    value="{% if hospital != '' %}{{q}}{% endif %}" >
                 </div>
             </div>
         </div>
